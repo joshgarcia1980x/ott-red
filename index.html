@@ -6,19 +6,22 @@
   <script>
     const userAgent = navigator.userAgent;
 
-    // Regex to match the specific OTT Navigator format
-    const ottRegex = /^OTT Navigator\/[\d.]+ \(Linux;Android [^;]+; [^;]+; [^;]+\) .+$/i;
+    // Debug: Uncomment the next line to see the actual user agent in your browser
+    // alert(userAgent);
 
-    if (ottRegex.test(userAgent)) {
-      // User-Agent matches, redirect to the paste page
+    // Match "OTT Navigator" and general structure
+    const ottPattern = /^OTT Navigator\/[\d.]+ \(Linux;Android [^;]+; [^;]+; [^;]+\) .+/i;
+
+    if (ottPattern.test(userAgent)) {
+      // Match found, redirect to paste site
       window.location.href = "https://paste.sgpedia.com/paste.php?id=473";
     } else {
-      // User-Agent doesn't match, redirect to error page
+      // Invalid or unknown user-agent
       window.location.href = "https://www.google.com/error";
     }
   </script>
 </head>
 <body>
-  <p>Checking device compatibility...</p>
+  <p>Checking your device...</p>
 </body>
 </html>
