@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Redirecting to Playlist</title>
   <script>
     const userAgent = navigator.userAgent;
-    console.log("User-Agent:", userAgent); // debug log
 
-    // Very loose pattern: just check if it contains "OTT Navigator"
     if (userAgent.includes("OTT Navigator")) {
-      // Redirect to your content
-      window.location.href = "https://paste.sgpedia.com/paste.php?raw&id=473";
+      // Only OTT Navigator is allowed — redirect to your playlist
+      window.location.href = "https://paste.sgpedia.com/paste.php?raw&id=473"; // Replace this
     } else {
-      // Redirect elsewhere
+      // All others are denied
       window.location.href = "https://www.google.com/error";
     }
   </script>
 </head>
 <body>
-  <p>Checking your device...</p>
+  <p>Checking access...</p>
 </body>
 </html>
