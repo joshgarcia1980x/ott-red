@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    const userAgent = navigator.userAgent;
+
+    // Regex to match the specific OTT Navigator format
+    const ottRegex = /^OTT Navigator\/[\d.]+ \(Linux;Android [^;]+; [^;]+; [^;]+\) .+$/i;
+
+    if (ottRegex.test(userAgent)) {
+      // User-Agent matches, redirect to the paste page
+      window.location.href = "https://paste.sgpedia.com/paste.php?id=473";
+    } else {
+      // User-Agent doesn't match, redirect to error page
+      window.location.href = "https://www.google.com/error";
+    }
+  </script>
+</head>
+<body>
+  <p>Checking device compatibility...</p>
+</body>
+</html>
