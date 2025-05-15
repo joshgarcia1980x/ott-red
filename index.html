@@ -5,18 +5,14 @@
   <title>Redirecting...</title>
   <script>
     const userAgent = navigator.userAgent;
+    console.log("User-Agent:", userAgent); // debug log
 
-    // Debug: Uncomment the next line to see the actual user agent in your browser
-    // alert(userAgent);
-
-    // Match "OTT Navigator" and general structure
-    const ottPattern = /^OTT Navigator\/[\d.]+ \(Linux;Android [^;]+; [^;]+; [^;]+\) .+/i;
-
-    if (ottPattern.test(userAgent)) {
-      // Match found, redirect to paste site
+    // Very loose pattern: just check if it contains "OTT Navigator"
+    if (userAgent.includes("OTT Navigator")) {
+      // Redirect to your content
       window.location.href = "https://paste.sgpedia.com/paste.php?id=473";
     } else {
-      // Invalid or unknown user-agent
+      // Redirect elsewhere
       window.location.href = "https://www.google.com/error";
     }
   </script>
