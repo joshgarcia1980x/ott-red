@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting to Playlist</title>
+  <title>Playlist Access</title>
   <script>
     const userAgent = navigator.userAgent;
-
     if (userAgent.includes("OTT Navigator")) {
-      // Only OTT Navigator is allowed — redirect to your playlist
-      window.location.href = "https://paste.sgpedia.com/paste.php?raw&id=473"; // Replace this
+      window.location.href = "https://paste.sgpedia.com/paste.php?raw&id=473"; // your paste URL
     } else {
-      // All others are denied
       window.location.href = "https://www.google.com/error";
     }
   </script>
